@@ -1,0 +1,9 @@
+- name: Create AWS instance
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  remote_user: centos
+  roles:
+    - create
+
+#- include: /root/Ansible-Automation/vagrant-alm/ansible/alm.yml   

@@ -1,0 +1,6 @@
+---
+- hosts: jenkins_server,nexus_server,sonar_server,app_server
+  gather_facts: false
+  tasks:
+    - name: ping all hosts
+      ping: 

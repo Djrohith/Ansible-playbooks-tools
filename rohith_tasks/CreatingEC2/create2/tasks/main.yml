@@ -1,0 +1,19 @@
+---
+- name: include a play for plain ec2 instance
+  include: ec2instance.yml
+  
+- name: once the ec2 instance is launch inlclude jenkins server
+  include: jenkinsserver.yml
+
+- name: include a play for creating ec2 instance for sonar
+  include: ec2instance.yml ec2_Name=sonar ec2_Tag=sonar private_Ip=10.0.1.22
+ 
+- name: once the ec2 instance is launched include sonar server
+  include: sonarserver.yml
+
+#- name: once the ec2 instance is launched include nexus server
+#  include: nexusserver.yml
+ 
+#- name: once the ec2 instance is launched inlcude application server
+#  include: application.yml
+ 

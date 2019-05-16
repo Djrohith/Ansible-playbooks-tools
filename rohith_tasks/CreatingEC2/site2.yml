@@ -1,0 +1,9 @@
+- name: Create AWS instance
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  remote_user: centos
+  vars:
+     resultdata: "{{ lookup('file','result.json')|from_json }}"
+  roles:
+      - create2

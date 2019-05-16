@@ -1,0 +1,48 @@
+---
+
+region: "{{ region_name | default('us-west-2') }}"
+
+# VPC
+vpc_cidr: "{{ VPC_cidr_name | default('10.0.0.0/16') }}"
+vpc_name: "{{ VPC | default('VPC_ANSIBLE_AUTOMATION') }}" 
+
+# Subnet
+subnet_name: "{{ Ansible_Subnet | default('Ansible-Subnet') }}"
+subnet_cidr: "{{ cidr | default('10.0.1.0/24') }}"
+
+
+#subnet_name: "default-Subnet"
+#subnet_cidr: "10.0.1.0/24"
+
+
+igw_name: "Traffic IGW"
+
+
+#route table name
+route_name: "PublicAnsible"
+
+#security group name
+#security_name: "{{ security_group }}"
+securitygroup_name: "Ansible Security Group"
+
+private_ip: "{{ private_Ip | default('10.0.1.17') }}"
+
+region: "{{ region_name | default('us-west-2') }}"
+instance_type: "{{ instance_name | default('t2.medium') }}"
+# ami: ami-f4cc1de2  # Ubuntu 16.04 LTS
+ami: "{{ ami_id | default('ami-3ecc8f46') }}" # Centos 7
+project_name: ansible
+demo: aws
+ec2_Name: "Ec2-Ansible"
+ec2_Tag: "Ec2-Ansible"
+#ec2_tag_Name1: "Jenkins server"
+#ec2_tag_Type1: "Jenkins server"
+#ec2_tag_Name2: "Sonar server"
+#ec2_tag_Type2: "Sonar server"
+#ec2_tag_Name3: "Nexus server"
+#ec2_tag_Type3: "Nexus server"
+#ec2_tag_Name4: "Application server"
+#ec2_tag_Type4: "Application server"
+app_code_user: "centos" # remote user
+hoststring: "ansible_ssh_user=centos ansible_ssh_private_key_file=/root/Ansible-Automation/rohith_tasks/aws-private.pem"
+hostpath: "/root/Ansible-Automation/rohith_tasks/CreatingEC2/hosts"

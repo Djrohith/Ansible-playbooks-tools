@@ -1,0 +1,32 @@
+[local]
+127.0.0.1 ansible_connection=local
+localhost ansible_connection=local
+
+
+
+[jenkins_server]
+
+
+
+
+
+[sonar_server]
+
+
+
+
+
+
+
+
+[nexus_server]
+
+
+
+
+
+
+
+
+
+[app_server]
